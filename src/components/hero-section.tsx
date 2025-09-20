@@ -63,7 +63,7 @@ function AnimatedText({ children, className = "" }: AnimatedTextProps) {
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative md:h-screen w-full overflow-hidden">
       {/* Wavy background - only visible on tablet and larger screens */}
       <div className="hidden md:block">
         <WavyBackground
@@ -111,12 +111,11 @@ export function HeroSection() {
         </div>
 
         {/* Voice Agent Section - moved up to be within first 100vh */}
-        <div className="flex-1 pb-8 flex flex-col justify-center">
-          {/* Mobile Audio Visualizer - Full width with no padding */}
+        {/* Mobile Audio Visualizer - Full width with no padding */}
+        {/* <div className="flex-1 pb-8 flex flex-col justify-center">
           <div className="w-full mb-6">
             <div className="relative">
               <AudioSVGVisualizer className="w-full h-24" />
-              {/* Play Button - Absolutely positioned in center */}
               <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-2 border-gray-300 hover:border-gray-400 rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-105">
                 <svg
                   className="w-5 h-5 text-gray-700 ml-0.5"
@@ -128,8 +127,6 @@ export function HeroSection() {
               </button>
             </div>
           </div>
-
-          {/* Centered text content with padding */}
           <div className="text-center px-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">
               Ask About Resonance Initiative
@@ -139,7 +136,7 @@ export function HeroSection() {
               Our voice agent is here to provide instant answers and guidance.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
