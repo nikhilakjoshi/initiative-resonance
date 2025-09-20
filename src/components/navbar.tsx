@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -54,13 +53,7 @@ export function Navbar() {
             {/* Logo Section */}
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <Image
-                  src="/resonance_logo.jpeg"
-                  alt="Resonance Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-lg"
-                />
+                <div className="w-4 h-4 mr-2 bg-primary rounded-full animate-pulse"></div>
                 <span className="text-2xl font-bold text-gray-900">
                   Resonance
                 </span>
@@ -88,9 +81,9 @@ export function Navbar() {
             </div>
 
             {/* Desktop CTA Buttons - Hidden on mobile */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-2">
               <Button
-                variant="secondary"
+                variant="ghost"
                 className="focus:outline-none focus-visible:outline-none"
                 asChild
               >
@@ -98,7 +91,7 @@ export function Navbar() {
               </Button>
               <Button
                 variant="default"
-                className="focus:outline-none focus-visible:outline-none"
+                className="focus:outline-none focus-visible:outline-none rounded-full"
                 asChild
               >
                 <Link href="/partner-with-us">Partner with us</Link>
@@ -135,35 +128,6 @@ export function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {/* Menu Header */}
-            <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
-              <Link
-                href="/"
-                className="flex items-center"
-                onClick={toggleMobileMenu}
-              >
-                <Image
-                  src="/resonance_logo.jpeg"
-                  alt="Resonance Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-lg"
-                />
-                <span className="text-2xl font-bold text-gray-900">
-                  Resonance
-                </span>
-              </Link>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggleMobileMenu}
-                className="focus:outline-none focus-visible:outline-none"
-                aria-label="Close mobile menu"
-              >
-                <X className="h-6 w-6" />
-              </Button>
-            </div>
-
             {/* Menu Items - Center aligned */}
             <div className="flex flex-col items-center justify-center h-full px-6 pb-16">
               {/* Navigation Links */}
